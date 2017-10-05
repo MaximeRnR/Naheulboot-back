@@ -1,4 +1,4 @@
-package com.naheulboot.back.naheulbootback.model
+package com.naheulboot.back.naheulbootback.models
 
 /**
  * Created by MaximeRnR on 05/10/17.

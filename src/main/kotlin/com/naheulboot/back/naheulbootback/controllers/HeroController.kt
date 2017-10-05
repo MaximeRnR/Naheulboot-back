@@ -1,6 +1,6 @@
-package com.naheulboot.back.naheulbootback.controller
+package com.naheulboot.back.naheulbootback.controllers
 
-import com.naheulboot.back.naheulbootback.model.Hero
+import com.naheulboot.back.naheulbootback.models.Hero
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import java.util.concurrent.atomic.AtomicLong

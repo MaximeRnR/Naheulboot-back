@@ -4,7 +4,6 @@ import com.naheulboot.back.naheulbootback.models.Hero
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
-import java.util.concurrent.atomic.AtomicLong
 import org.springframework.web.bind.annotation.RestController
 
 
@@ -21,7 +20,11 @@ class HeroController {
             Hero(id = 2, name = "Billy La Castagne", race = "Orc"))
 
     @GetMapping("/heroes")
-    fun hero() =
+    fun heroes() =
             getAllHeroes()
+
+    @GetMapping("/hero")
+    fun heroByName(@RequestParam(value = "name") name: String) =
+            getAllHeroes().filter { it.name.equals("$name") }
 
 }

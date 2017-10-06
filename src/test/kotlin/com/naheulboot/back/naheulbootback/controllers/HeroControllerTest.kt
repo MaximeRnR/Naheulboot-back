@@ -38,4 +38,21 @@ class HeroControllerTest {
                         equalTo(listOf("Humain", "Elfe", "Orc")))
                 )
     }
+
+    @Test fun `find hero by name` () {
+        mockMvc.perform(get("/api/hero?name=Roger Hugue"))
+                .andExpect(status().isOk)
+                .andExpect(jsonPath(
+                        "$[0].id",
+                        equalTo(0))
+                )
+                .andExpect(jsonPath(
+                        "$[0].name",
+                        equalTo("Roger Hugue"))
+                )
+                .andExpect(jsonPath(
+                        "$[0].race",
+                        equalTo("Humain"))
+                )
+    }
 }
